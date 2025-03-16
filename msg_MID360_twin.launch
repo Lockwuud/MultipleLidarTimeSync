@@ -3,7 +3,7 @@
 	<!--user configure parameters for ros start-->
 	<arg name="lvx_file_path" default="livox_test.lvx"/>
 	<arg name="bd_list" default="100000000000000"/>
-	<arg name="xfer_format" default="0"/>
+	<arg name="xfer_format" default="1"/>
 	<arg name="multi_topic" default="1"/>
 	<arg name="data_src" default="0"/>
 	<arg name="publish_freq" default="10.0"/>
@@ -34,7 +34,7 @@
 
 	<group if="$(arg rviz_enable)">
 		<node name="livox_rviz" pkg="rviz" type="rviz" respawn="true"
-				args="-d $(find livox_ros_driver2)/config/display_point_cloud_ROS1.rviz"/>
+				args="-d $(find livox_ros_driver2)/config/display_point_cloud_ROS1_twin.rviz"/>
     </group>
 
 	<group if="$(arg rosbag_enable)">
